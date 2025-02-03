@@ -25,6 +25,7 @@ function QuestionsSection({ mockInterviewQuestion, activeQuestionIndex }) {
                     ? "bg-primary text-white"
                     : "bg-secondary")
                 }
+                key={index}
               >
                 Question #{index + 1}
               </h2>
