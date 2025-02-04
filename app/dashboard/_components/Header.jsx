@@ -1,11 +1,12 @@
 "use client";
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
 function Header() {
   const path = usePathname();
+  const route = useRouter()
   useEffect(() => {
     console.log(path);
   }, []);
@@ -15,7 +16,7 @@ function Header() {
       <Image src={"/logo.svg"} alt="logo" width={160} height={100} />
 
       <ul className="hidden md:flex gap-6 ">
-        <li className= {`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === "/dashboard" && "font-bold text-primary"}`}>
+        <li onClick={()=>route.push("/dashboard")} className= {`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === "/dashboard" && "font-bold text-primary"}`}>
           Dashboard
         </li>
         <li className= {`hover:text-primary hover:font-bold transition-all cursor-pointer ${path === "/dashboard/questions" && "font-bold text-primary"}`}>
