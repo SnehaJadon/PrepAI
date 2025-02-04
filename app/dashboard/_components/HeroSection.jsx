@@ -19,7 +19,7 @@ function HeroSection() {
   const route = useRouter()
 
   return (
-    <div className="relative pt-4 flex flex-col justify-center">
+    <div className="relative pt-4 flex flex-col justify-center" style={{background: "#202020"}}>
       {/* Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 -left-4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-float" />
@@ -33,7 +33,7 @@ function HeroSection() {
         <div className="pt-8 sm:pt-16 lg:pt-20 pb-8 sm:pb-16 lg:pb-28">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
-              <span className="block">Master Your Interviews</span>
+              <span className="block text-white">Master Your Interviews</span>
               <span className="block gradient-text mt-2">
                 with AI-Powered Practice
               </span>
@@ -82,7 +82,7 @@ function HeroSection() {
           </div>
 
           {/* Feature Cards */}
-          {/* <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="group glass-card animate-card-border p-8 rounded-2xl">
               <div className="card-content">
                 <div className="bg-primary/10 rounded-xl p-3 w-fit">
@@ -98,9 +98,9 @@ function HeroSection() {
               </div>
             </div>
             <div className="group glass-card animate-card-border p-8 rounded-2xl">
-              <div className="card-content bg-slate-500">
-                <div className="bg-secondary/10 rounded-xl p-3 w-fit">
-                  <Users className="h-6 w-6 text-secondary group-hover:scale-110 transition-transform" />
+              <div className="card-content">
+                <div className="bg-primary/10 rounded-xl p-3 w-fit">
+                  <Users className="h-6 w-6 text-primary group-hover:scale-110 transition-transform" />
                 </div>
                 <h3 className="text-xl font-semibold mt-4 gradient-text">
                   Industry Specific
@@ -125,7 +125,7 @@ function HeroSection() {
                 </p>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
